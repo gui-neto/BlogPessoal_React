@@ -5,12 +5,12 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Tema from '../../../models/Tema';
 import { buscar } from '../../../services/Service';
 import CardTemas from '../cardTemas/CardTemas';
-import { toastAlerta } from '../../../utils/ToastAlerta';
+import { toastAlerta } from '../../../utils/toastAlerta';
 
 function ListaTemas() {
   const [temas, setTemas] = useState<Tema[]>([]);
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
